@@ -1,0 +1,198 @@
+﻿
+@{
+    Layout = "~/Views/esquema.cshtml";
+}
+
+@section scripts_propios{
+    <script>
+        $(document).ready(function () {
+            $('.menu_context1').BtnScroll({
+                btn01: ".menu_upside",
+                btn02: ".menu_downside",
+                itemTag: ".imgScrollList_v li",
+                speed: 50
+            });
+        });
+    </script>    
+}
+
+@section diseño_propio{
+    <style>
+        .menu_context1, .menu_context2, .menu_context3 {
+            position: relative;
+            width: 152px;
+            height: 145px;
+            overflow: hidden;
+        }
+
+            .menu_context1:hover, .menu_context2:hover, .menu_context3:hover {
+                border: 3px white solid;
+            }
+
+
+        .menu_upside, .menu_downside {
+            position: absolute;
+            display: block;
+            left: 45%;
+            width: 60px;
+            height: 20px;
+            overflow: hidden;
+            z-index: 2;
+            opacity: 0;
+            transition: ease .3s;
+            cursor: pointer;
+            color: gray;
+        }
+
+        .menu_upside {
+            top: 0;
+        }
+        .menu_downside {
+            bottom: 0;
+        }
+            .menu_upside:hover, .menu_downside:hover {
+                color: white;
+                opacity: 1;
+            }
+
+        .imgScrollList_v {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 152px;
+            height:98px !important;
+            overflow: hidden;
+        }
+
+            .imgScrollList_v ul {
+                position: relative;
+                overflow: hidden;
+                transition: ease-in-out .3s;
+            }
+
+            .imgScrollList_v li {
+                margin: 0 10px 5px;
+            }
+
+                .imgScrollList_v li a {
+                    display: block;
+                    width: 128px;
+                    height: 96px;
+                    overflow: hidden;
+                    text-align: center;
+                    color: white;
+                }
+
+                    .imgScrollList_v li a i {
+                        padding: 10% 0;
+                       
+                    }
+
+    </style>
+}
+
+<div class="main_container container">
+    <div class="row">
+        <div class="col-md-9 m-auto">
+            <h3 class="text-center mb-5 text-white-50">Panel de administración</h3>
+        </div>
+        <div class="col-md-9 m-auto d-flex justify-content-center">
+            <div class="col-md-3">
+                <div class="menu_context1">
+                    <a class="menu_upside">
+                        <i class="oi oi-chevron-top"></i>
+                    </a>
+                    <a class="menu_downside">
+                        <i class="oi oi-chevron-bottom"></i>
+                    </a>
+                    <div class="imgScrollList_v">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#"><i class="oi oi-person" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-people" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-cog" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="menu_context2">
+                    <a class="menu_upside">
+                        <i class="oi oi-chevron-top"></i>
+                    </a>
+                    <a class="menu_downside">
+                        <i class="oi oi-chevron-bottom"></i>
+                    </a>
+                    <div class="imgScrollList_v">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="menu_context3">
+                    <a class="menu_upside">
+                        <i class="oi oi-chevron-top"></i>
+                    </a>
+                    <a class="menu_downside">
+                        <i class="oi oi-chevron-bottom"></i>
+                    </a>
+                    <div class="imgScrollList_v">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#"><i class="oi oi-cog" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="oi oi-bullhorn" style="font-size:60px;width:128px;height:96px;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center" style="color:#eee;font-weight:bolder;">
+                <br /><br />
+                <em>2020 <i class="glyphicon glyphicon-copyright-mark"></i> Sartharian</em>
+            </div>
+        </div>
+    </div>
+</div>
